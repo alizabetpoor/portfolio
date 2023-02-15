@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'sfmono-bold';
+    src: url('/public/assets/fonts/SF-Mono-Bold.ttf');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: sfmono;
+    src: url('/public/assets/fonts/SF-Mono-Regular.ttf');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'calibre-bold';
+    src: url('/public/assets/fonts/Calibre-Bold.woff2');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'calibre';
+    src: url('/public/assets/fonts/Calibre-Regular.woff2');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+}
+
+html,body{
+    direction: ltr;
+    scroll-behavior: smooth;
+}
+
+html,*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242424;
+}
+
+a{
+    text-decoration: none;
+    color: #b6b5ab;
+}
