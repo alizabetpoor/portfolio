@@ -1,0 +1,25 @@
+.menuIcon {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    direction: rtl;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        height: 0;
+        border-top: solid 8px $light-gray;
+    }
+
+    &__firstLine {
+        width: 45.5px;
+    }
+
+    &__secondLine {
+        width: 35px;
+    }
+
+    &__thirdLine {
+        width: 22.5px;
+    }
+}
