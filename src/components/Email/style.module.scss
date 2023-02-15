@@ -1,0 +1,55 @@
+@import '@/styles/mediaQueries';
+
+.email {
+	position: fixed;
+	bottom: 0;
+	right: 100px;
+	color: $light-gray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 18px;
+
+	&__link {
+		transform: rotate(90deg) translateX(-96px);
+		padding: 10px 0;
+		transition: 0.2s ease-in-out;
+
+		&:hover {
+			color: $hover-gray;
+			transform: rotate(90deg) translateX(-100px);
+		}
+	}
+
+	&__line {
+		width: 1px;
+		height: 90px;
+		background-color: $light-gray;
+	}
+}
+
+.emailHorizontal {
+	&__link {
+		font-size: 12px;
+
+		&:hover {
+			color: $hover-gray;
+		}
+	}
+
+	&__line {
+		display: none;
+	}
+}
+
+@include xl-media {
+	.email {
+		right: -20px;
+	}
+}
+
+@include lg-media {
+	.email {
+		display: none;
+	}
+}
