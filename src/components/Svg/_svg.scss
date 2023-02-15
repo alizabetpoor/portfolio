@@ -1,0 +1,16 @@
+@mixin svgStyle {
+	stroke: $light-gray;
+	width: 40px;
+	height: 40px;
+	padding: 10px 10px;
+	&:hover {
+		stroke: $hover-gray;
+	}
+}
+
+@mixin transformStyle {
+	transition: 0.2s ease-in-out;
+	&:hover {
+		transform: translateY(-4px);
+	}
+}

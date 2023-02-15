@@ -1,0 +1,8 @@
+@import '../svg';
+
+.linkedInSvg {
+	@include svgStyle;
+	&__transform {
+		@include transformStyle;
+	}
+}

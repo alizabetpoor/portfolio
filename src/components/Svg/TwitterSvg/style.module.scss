@@ -1,0 +1,8 @@
+@import '../svg';
+
+.twitterSvg {
+	@include svgStyle;
+	&__transform {
+		@include transformStyle;
+	}
+}

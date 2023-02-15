@@ -1,0 +1,7 @@
+@import '../svg';
+.githubSvg {
+	@include svgStyle;
+	&__transform {
+		@include transformStyle;
+	}
+}
