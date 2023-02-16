@@ -9,7 +9,7 @@ const Header = () => {
       <div>
         <div className={styles.header__square}></div>
       </div>
-      <div className={styles.header__buttons}>
+      <div data-testid="header" className={styles.header__buttons}>
         <a href="#about">
           <Button
             width="fit-content"
