@@ -33,11 +33,12 @@
             font-size: 28px;
             margin-top: 34px;
             margin-bottom: 110px;
-            max-width: 782px;
+            max-width: 840px;
 
             &__degree {
                 color: $yellow;
                 position: relative;
+                display: inline-block;
 
                 &:before {
                     width: 100%;

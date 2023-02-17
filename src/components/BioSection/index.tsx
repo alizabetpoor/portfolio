@@ -18,13 +18,13 @@ const BioSection = () => {
           I'm a {bioSectionData.position}.
         </h3>
         <p className={styles.bioSection__body__detail}>
-          I worked with more than a year with the javascript and react library.
-          I'm also studying for a{" "}
+          I have been working with JavaScript and the React library for over a
+          year. I am currently pursuing a{" "}
           <span className={styles.bioSection__body__detail__degree}>
-            <span></span>
             {bioSectionData.degreeOfEducation}
           </span>{" "}
-          in computer engineering.
+          in Computer Engineering while also gaining experience with various
+          technologies.
         </p>
         <a href="#contact">
           <Button>Contact Me</Button>
