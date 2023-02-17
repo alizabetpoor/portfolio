@@ -1,0 +1,209 @@
+@import '@/styles/mediaQueries';
+
+.aboutSection {
+    padding: 380px 14.6% 0 14.6%;
+
+    &__describe {
+        display: flex;
+        column-gap: 46px;
+        align-items: flex-start;
+
+        &__box {
+            width: 802px;
+            font-size: 28px;
+            line-height: 39px;
+            color: $gray;
+
+            &__skills {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 40px;
+                row-gap: 14px;
+
+                div {
+                    flex-basis: 33.3333%;
+                }
+            }
+        }
+
+        &__photo {
+            position: relative;
+            width: 522px;
+            height: 522px;
+            border-radius: 4px;
+
+
+            &__container {
+                border-radius: 4px;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+
+                >div {
+                    position: unset !important;
+                }
+
+                &__image {
+                    width: 100% !important;
+                    object-fit: cover;
+                    position: relative !important;
+                    height: unset;
+                }
+
+                &:after {
+
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    border-radius: 4px;
+                    left: 0;
+                    opacity: 0.5;
+                    top: 0;
+                    bottom: 3px;
+                    transition: 0.2s ease-in-out;
+                    background-color: $yellow;
+                }
+
+                &:hover {
+
+                    &:after {
+                        opacity: 0.35;
+                    }
+
+                }
+            }
+
+            &:before {
+                width: 100%;
+                height: 80%;
+                position: absolute;
+                filter: blur(76px);
+                background-color: #234640;
+                content: "";
+                z-index: -1;
+                transform: translateX(-50%) translateY(20%);
+            }
+
+
+        }
+    }
+}
+
+
+@include xxl-media {
+    .aboutSection {
+        &__describe {
+            &__box {
+                font-size: 25px;
+                width: 600px;
+                min-width: 470px;
+
+                &__skills {
+                    div {
+                        flex-basis: 49%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include xl-media {
+    .aboutSection {
+        &__describe {
+            &__box {
+                font-size: 22px;
+
+                &__skills {
+                    div {
+                        h6 {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+
+            &__photo {
+                width: 250px;
+                min-width: 250px;
+                height: 250px;
+
+                &__container {
+                    height: 100%;
+                    width: 100%;
+
+                    &__image {
+                        height: 100%;
+                        width: 100%;
+
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        border-radius: 4px;
+                        left: 0;
+                        opacity: 0.5;
+                        top: 0;
+                        bottom: 0;
+                        transition: 0.2s ease-in-out;
+                        background-color: $yellow;
+                    }
+                }
+
+                &:before {
+                    width: 140%;
+                    height: 140%;
+                    position: absolute;
+                    filter: blur(76px);
+                    background-color: #234640;
+                    content: "";
+                    z-index: -1;
+                    transform: translateX(-80%) translateY(0%);
+                }
+            }
+        }
+    }
+}
+
+
+@include lg-media {
+    .aboutSection {
+        &__describe {
+            &__box {
+                width: 100%;
+                min-width: auto;
+
+                &:before {
+                    width: 46%;
+                    height: 40%;
+                    position: absolute;
+                    filter: blur(76px);
+                    background-color: #234640;
+                    content: "";
+                    z-index: -1;
+                    transform: translateX(100%) translateY(-20%);
+                }
+            }
+
+            &__photo {
+                display: none;
+            }
+        }
+    }
+}
+
+@include sm-media {
+    .aboutSection {
+        padding: 200px 0 0 0;
+
+        &__describe {
+            &__box {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+        }
+    }
+}
