@@ -1,4 +1,5 @@
 @import '@/styles/mediaQueries';
+@import '@/styles/lightEffect';
 
 .title {
 	padding-top: 10px;
@@ -14,14 +15,9 @@
 		position: relative;
 
 		&:before {
-			background-color: $yellow;
-			width: 183%;
-			height: 163%;
-			position: absolute;
-			-webkit-filter: blur(50px);
-			filter: blur(50px);
-			content: "";
-			transform: translateX(-50%);
+			@include lightEffect(183%, 163%, 50px, $yellow) {
+				transform: translateX(-50%);
+			}
 		}
 	}
 

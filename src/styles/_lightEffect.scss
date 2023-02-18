@@ -1,0 +1,10 @@
+@mixin lightEffect($width , $height, $blur, $color) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    -webkit-filter: blur($blur);
+    filter: blur($blur);
+    background-color: $color;
+    content: '';
+    @content
+}

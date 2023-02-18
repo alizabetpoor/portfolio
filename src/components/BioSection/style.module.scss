@@ -1,4 +1,5 @@
 @import '@/styles/mediaQueries';
+@import '@/styles/lightEffect';
 
 .bioSection {
 
@@ -41,13 +42,7 @@
                 display: inline-block;
 
                 &:before {
-                    width: 100%;
-                    height: 60%;
-                    position: absolute;
-                    -webkit-filter: blur(50px);
-                    filter: blur(50px);
-                    background-color: $yellow;
-                    content: '';
+                    @include lightEffect(100%, 60%, 50px, $yellow);
                 }
             }
         }
