@@ -2,7 +2,7 @@ import Box from "@/core/Box";
 import Label from "@/core/Label";
 import Title from "../Title";
 import { aboutSectionData } from "@/static/components/aboutSection/aboutSectionData";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./style.module.scss";
 
 const AboutSection = () => {
