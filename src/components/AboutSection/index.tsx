@@ -12,13 +12,19 @@ const AboutSection = () => {
       <div className={styles.aboutSection__describe}>
         <Box className={styles.aboutSection__describe__box}>
           {aboutSectionData.describeText}
-          <div className={styles.aboutSection__describe__box__skills}>
+          <div
+            data-testid="skills"
+            className={styles.aboutSection__describe__box__skills}
+          >
             {aboutSectionData.skills.map((skill) => (
               <Label key={skill.id} text={skill.name} />
             ))}
           </div>
         </Box>
-        <div className={styles.aboutSection__describe__photo}>
+        <div
+          data-testid="image"
+          className={styles.aboutSection__describe__photo}
+        >
           <div className={styles.aboutSection__describe__photo__container}>
             <Image
               alt="alizabetpour | علی ضابط پور"
