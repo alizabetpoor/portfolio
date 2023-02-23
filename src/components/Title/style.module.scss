@@ -57,5 +57,13 @@
 		&__number {
 			line-height: 33px;
 		}
+
+		&__blur {
+
+			&:before {
+
+				display: none;
+			}
+		}
 	}
 }
