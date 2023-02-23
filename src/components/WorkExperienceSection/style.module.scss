@@ -1,0 +1,61 @@
+@import '@/styles/lightEffect';
+@import '@/styles/mediaQueries';
+
+.workExperience {
+	padding: 450px 14% 0 14%;
+	overflow: hidden;
+
+	&__detail {
+		display: flex;
+		column-gap: 28px;
+
+		&__box {
+			width: 1080px;
+
+		}
+
+		&__lightEffect {
+			position: relative;
+
+			&:before {
+				@include lightEffect(800px, 600px, 100px, #2F1818) {
+					z-index: -1;
+					transform: translateX(-30%) translateY(50%);
+				}
+			}
+		}
+	}
+}
+
+@include lg-media {
+	.workExperience {
+		padding: 450px 8% 0 8%;
+
+	}
+}
+
+@include sm-media {
+	.workExperience {
+		padding: 240px 0 0 0;
+
+		&__detail {
+			flex-direction: column;
+
+			&__box {
+				width: 100%;
+			}
+
+			&__lightEffect {
+				position: relative;
+
+				&:before {
+					@include lightEffect(60px, 200px, 100px, $yellow) {
+						z-index: -1;
+						transform: translateX(0%) translateY(-200%);
+					}
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,102 @@
+@import '@/styles/mediaQueries';
+@import '@/styles/lightEffect';
+
+.detail {
+
+	&__roleAndCompany {
+		font-size: 42px;
+		line-height: 40px;
+		color: $white;
+		display: flex;
+		column-gap: 24px;
+		flex-wrap: wrap;
+
+		a {
+			text-decoration: underline;
+			font-size: 38px;
+			color: $yellow;
+		}
+	}
+
+	&__date {
+		font-size: 24px;
+		line-height: 34px;
+		color: $light-gray;
+		margin-bottom: 16px;
+	}
+
+	&__description {
+		color: $gray;
+		font-size: 28px;
+		line-height: 39px;
+	}
+
+	&__items {
+		margin-top: 30px;
+		line-height: 39px;
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		row-gap: 20px;
+
+		h6 {
+			color: $gray;
+			font-size: 28px;
+		}
+
+	}
+
+
+}
+
+
+@include xl-media {
+	.detail {
+
+		&__roleAndCompany {
+			font-size: 32px;
+
+			a {
+				font-size: 24px;
+			}
+		}
+
+		&__date {
+			font-size: 20px;
+		}
+
+		&__description {
+			font-size: 22px;
+		}
+
+		&__items {
+
+			h6 {
+				font-size: 22px;
+			}
+
+		}
+
+	}
+}
+
+
+@include sm-media {
+	.detail {
+
+		&__roleAndCompany {
+			flex-direction: column;
+		}
+
+		&__date {
+			font-size: 18px;
+		}
+
+		&__items {
+			h6 {
+				color: $white;
+			}
+		}
+
+	}
+}
