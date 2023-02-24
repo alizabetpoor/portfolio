@@ -2,7 +2,7 @@
 @import '@/styles/mediaQueries';
 
 .workExperience {
-	padding: 450px 14% 0 14%;
+	padding: 450px 14% 390px 14%;
 	overflow: hidden;
 
 	&__detail {
@@ -18,9 +18,10 @@
 			position: relative;
 
 			&:before {
-				@include lightEffect(800px, 600px, 100px, #2F1818) {
+				@include lightEffect(600px, 400px, 100px, #2F1818) {
 					z-index: -1;
-					transform: translateX(-30%) translateY(50%);
+					transform: translateX(35%) translateY(48%);
+					right: 0;
 				}
 			}
 		}
@@ -29,14 +30,14 @@
 
 @include lg-media {
 	.workExperience {
-		padding: 450px 8% 0 8%;
+		padding: 450px 8% 390px 8%;
 
 	}
 }
 
 @include sm-media {
 	.workExperience {
-		padding: 240px 0 0 0;
+		padding: 240px 0 300px 0;
 
 		&__detail {
 			flex-direction: column;
