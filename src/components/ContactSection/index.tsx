@@ -23,9 +23,11 @@ const ContactSection = () => {
           <span className={styles.contact__container__description__text}>
             {contactData.description}
           </span>
-          <Button className={styles.contact__container__description__button}>
-            Say Hello!
-          </Button>
+          <a href="mailto:ali_0_zabetpoor@ymail.com">
+            <Button className={styles.contact__container__description__button}>
+              Say Hello!
+            </Button>
+          </a>
         </div>
       </div>
       <Box className={styles.contact__ui}>
