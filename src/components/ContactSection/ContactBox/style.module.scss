@@ -1,0 +1,88 @@
+@import '@/styles/mediaQueries';
+@import '@/styles/lightEffect';
+
+.contactBox {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 24px;
+    position: relative;
+
+    &:before {
+        @include lightEffect(260px, 260px, 100px, #234640) {
+            z-index: -1;
+            transform: translateX(-50%) translateY(50%);
+        }
+    }
+
+    &__item {
+        span {
+            &:first-child {
+                font-size: 32px;
+                color: $white;
+                display: block;
+                margin-bottom: 4px;
+            }
+
+            &:last-child {
+                font-size: 28px;
+                color: $gray;
+                display: block;
+            }
+        }
+    }
+}
+
+@include xl-media {
+    .contactBox {
+        &__item {
+            span {
+                &:first-child {
+                    font-size: 28px;
+                }
+
+                &:last-child {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@include lg-media {
+    .contactBox {
+        width: 308px;
+        align-self: flex-start;
+
+        &__item {
+            span {
+                &:last-child {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include md-media {
+    .contactBox {
+        width: 100%;
+
+        &:before {
+            display: none;
+        }
+
+        &__item {
+            span {
+                &:first-child {
+                    font-size: 32px;
+                }
+
+                &:last-child {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
