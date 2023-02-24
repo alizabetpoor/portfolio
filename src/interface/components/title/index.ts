@@ -3,4 +3,5 @@ export interface TitleProps {
   number: number;
   text: string;
   haveBlur?: boolean;
+  className?: string;
 }
