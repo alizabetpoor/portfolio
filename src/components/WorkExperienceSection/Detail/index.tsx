@@ -15,7 +15,9 @@ const Detail = ({
     <div className={styles.detail}>
       <div className={styles.detail__roleAndCompany}>
         <span>{role}</span>
-        <a href={siteAddress}>{company}</a>
+        <a rel="noreferrer" target="_blank" href={siteAddress}>
+          {company}
+        </a>
       </div>
       <div className={styles.detail__date}>
         <span>{startDate} </span>
