@@ -1,7 +1,7 @@
 export const workExperienceData = [
   {
     company: "Malltina",
-    siteAddress: "malltina.com",
+    siteAddress: "https://malltina.com",
     startDate: "June 2022",
     endDate: "September 2022",
     role: "Front-end developer",
@@ -16,7 +16,7 @@ export const workExperienceData = [
   },
   {
     company: "portfolio",
-    siteAddress: "alizabetpour.ir",
+    siteAddress: "http://alizabetpour.ir",
     startDate: "February 2023",
     endDate: "March 2023",
     role: "Front-end developer",
@@ -30,7 +30,7 @@ export const workExperienceData = [
   },
   {
     company: "weblog",
-    siteAddress: "weblog.alizabetpour.ir",
+    siteAddress: "http://weblog.alizabetpour.ir",
     startDate: "December 2021",
     endDate: "February 2022",
     role: "Front-end developer",
