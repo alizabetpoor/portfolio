@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 
 const GoUp = () => {
-  const squareRef = useRef(null);
+  const squareRef = useRef<any>(null);
 
   const onScroll = () => {
     if (squareRef.current) {
