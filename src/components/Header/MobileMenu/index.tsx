@@ -9,7 +9,7 @@ import styles from "./style.module.scss";
 
 const MobileMenu = () => {
   const [showMenuBody, setShowMenuBody] = useState<boolean>(false);
-  const bodyRef = useRef(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
   let animateTimeout: ReturnType<typeof setTimeout>;
 
   const togglePageScroll = (prevShowMenuState: boolean) => {
@@ -26,11 +26,13 @@ const MobileMenu = () => {
 
   const handleClickOutside = (): void => {
     if (showMenuBody) {
-      bodyRef.current.className += ` ${styles["mobileMenu--hide"]}`;
-      animateTimeout = setTimeout(() => {
-        togglePageScroll(true);
-        setShowMenuBody(false);
-      }, 550);
+	if (bodyRef.current) {
+        bodyRef.current.className += ` ${styles["mobileMenu--hide"]}`;
+        animateTimeout = setTimeout(() => {
+          togglePageScroll(true);
+          setShowMenuBody(false);
+        }, 550);
+      }
     }
   };
 

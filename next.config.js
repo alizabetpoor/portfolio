@@ -4,6 +4,9 @@ const nextConfig = {
   sassOptions: {
     additionalData: `@import "src/styles/theme.scss";`,
   },
+  experimental: {
+    outputStandalone: true,
+  },
 };
 
 module.exports = nextConfig;
