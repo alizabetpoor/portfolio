@@ -23,7 +23,7 @@ const ContactSection = () => {
           <span className={styles.contact__container__description__text}>
             {contactData.description}
           </span>
-          <a href="mailto:ali_0_zabetpoor@ymail.com">
+          <a href="mailto:alizabetpoor80@gmail.com">
             <Button className={styles.contact__container__description__button}>
               Say Hello!
             </Button>

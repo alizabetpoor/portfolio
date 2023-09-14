@@ -10,9 +10,9 @@ const Email = ({ isHorizontal = false }: EmailProps) => {
         className={`${
           !isHorizontal ? styles.email__link : styles["emailHorizontal__link"]
         }`}
-        href="mailto:ali_0_zabetpoor@ymail.com"
+        href="mailto:alizabetpoor80@gmail.com"
       >
-        ali_0_zabetpoor@ymail.com
+        alizabetpoor80@gmail.com
       </a>
       <div
         className={`${

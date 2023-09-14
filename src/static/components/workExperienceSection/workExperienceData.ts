@@ -1,5 +1,20 @@
 export const workExperienceData = [
   {
+    company: "asiastartup",
+    siteAddress: "https://asiastartup.ir",
+    startDate: "July 2023",
+    endDate: "Present",
+    role: "Front-end developer",
+    description:
+      "I worked as a frontend developer at Asiastartup, specializing in React, Next.js, Redux, Material UI, and TypeScript.",
+    items: [
+      "Resolved performance issues and implemented new features based on UI designs",
+      "Contributed to <a target='_blank' rel='noreferrer noopener' style='text-decoration: underline;color:#f1c40f' href='https://varzesh.online'>varzesh.online</a>, a sports platform with live scores, match details, and sports news",
+      "Collaborated with two frontend developers, leveraging their expertise to enhance work",
+      "Strong problem-solving skills, attention to detail, and proactive approach to stay updated with industry trends",
+    ],
+  },
+  {
     company: "Malltina",
     siteAddress: "https://malltina.com",
     startDate: "June 2022",
@@ -28,17 +43,17 @@ export const workExperienceData = [
       "Designed and developed the site to showcase your skills and experience",
     ],
   },
-  {
-    company: "weblog",
-    siteAddress: "http://weblog.alizabetpour.ir",
-    startDate: "December 2021",
-    endDate: "February 2022",
-    role: "Front-end developer",
-    description:
-      "I created a personal project using React for the frontend and Django REST Framework for the backend",
-    items: [
-      "Used Tailwind CSS for styling and Formik for form management",
-      "Dockerized the project for easy deployment",
-    ],
-  },
+  // {
+  //   company: "weblog",
+  //   siteAddress: "http://weblog.alizabetpour.ir",
+  //   startDate: "December 2021",
+  //   endDate: "February 2022",
+  //   role: "Front-end developer",
+  //   description:
+  //     "I created a personal project using React for the frontend and Django REST Framework for the backend",
+  //   items: [
+  //     "Used Tailwind CSS for styling and Formik for form management",
+  //     "Dockerized the project for easy deployment",
+  //   ],
+  // },
 ];
