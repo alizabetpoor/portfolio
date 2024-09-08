@@ -3,7 +3,7 @@ export const workExperienceData = [
     company: "asiastartup",
     siteAddress: "https://asiastartup.ir",
     startDate: "July 2023",
-    endDate: "Present",
+    endDate: "Oct 2023",
     role: "Front-end developer",
     description:
       "I worked as a frontend developer at Asiastartup, specializing in React, Next.js, Redux, Material UI, and TypeScript.",
