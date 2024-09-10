@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   nextjs:
     # image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_NAME}"
