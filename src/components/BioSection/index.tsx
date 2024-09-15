@@ -19,11 +19,11 @@ const BioSection = () => {
         </h3>
         <p className={styles.bioSection__body__detail}>
           I have been working with JavaScript and the React library for over a
-          year. I am currently pursuing a{" "}
+          year. I pursued a{" "}
           <span className={styles.bioSection__body__detail__degree}>
             {bioSectionData.degreeOfEducation}
           </span>{" "}
-          in Computer Engineering while also gaining experience with various
+          in Computer Engineering and I'm also gaining experience with various
           technologies.
         </p>
         <a href="#contact">
