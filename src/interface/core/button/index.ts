@@ -2,6 +2,7 @@ import { ReactNode } from "react"
 
 export interface ButtonProps{
     onClick?: ()=>void ;
+    href?: string;
     children:ReactNode;
     width?:string|number;
     height?:string|number;

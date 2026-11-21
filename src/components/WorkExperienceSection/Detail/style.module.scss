@@ -1,3 +1,4 @@
+@use "../../../styles/_theme.scss" as *;
 @import '@/styles/mediaQueries';
 @import '@/styles/lightEffect';
 
@@ -38,10 +39,31 @@
 		flex-direction: column;
 		list-style: none;
 		row-gap: 20px;
+		padding: 0;
 
-		h6 {
+		li {
 			color: $gray;
-			font-size: 28px;
+			font-size: 22px;
+			position: relative;
+			padding-left: 24px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 16px;
+				width: 7px;
+				height: 7px;
+				border-right: 2px solid $yellow;
+				border-top: 2px solid $yellow;
+				transform: rotate(45deg);
+			}
+
+			a {
+				color: $yellow;
+				text-decoration: underline;
+			text-underline-offset: 0.15em;
+			}
 		}
 
 	}
@@ -71,9 +93,7 @@
 
 		&__items {
 
-			h6 {
-				font-size: 22px;
-			}
+			li { font-size: 20px; }
 
 		}
 
@@ -93,10 +113,11 @@
 		}
 
 		&__items {
-			h6 {
-				color: $white;
-			}
+			li { color: $white; }
 		}
 
 	}
 }
+
+
+

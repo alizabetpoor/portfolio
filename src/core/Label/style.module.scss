@@ -1,3 +1,4 @@
+@use "../../styles/_theme.scss" as *;
 .label {
     display: flex;
     align-items: flex-start;
@@ -33,3 +34,5 @@
 
     }
 }
+
+

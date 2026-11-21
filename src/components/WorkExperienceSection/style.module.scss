@@ -1,8 +1,9 @@
+@use "../../styles/_theme.scss" as *;
 @import '@/styles/lightEffect';
 @import '@/styles/mediaQueries';
 
 .workExperience {
-	padding: 450px 14% 390px 14%;
+	padding: 250px 12% 220px;
 	overflow: hidden;
 
 	&__detail {
@@ -30,14 +31,14 @@
 
 @include lg-media {
 	.workExperience {
-		padding: 450px 8% 390px 8%;
+		padding: 250px 8% 200px;
 
 	}
 }
 
 @include sm-media {
 	.workExperience {
-		padding: 240px 0 300px 0;
+		padding: 170px 0 150px;
 
 		&__detail {
 			flex-direction: column;
@@ -60,3 +61,6 @@
 		}
 	}
 }
+
+
+

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Title from "@/components/Title";
 import Company from "@/components/WorkExperienceSection/Company";
@@ -14,14 +16,14 @@ const WorkExperienceSection = () => {
   };
 
   return (
-    <div className={styles.workExperience}>
+    <section className={styles.workExperience} aria-labelledby="experience-heading">
       <Title id="experience" haveBlur text="Experience" number={2} />
       <div className={styles.workExperience__detail}>
         <Company
           activeCompanyIndex={activeCompanyIndex}
           handleCompanyIndexChange={handleCompanyIndexChange}
         />
-        <Box className={styles.workExperience__detail__box}>
+        <Box id="experience-panel" role="tabpanel" aria-labelledby={`experience-tab-${activeCompanyIndex}`} className={styles.workExperience__detail__box}>
           <Detail
             company={workExperienceData[activeCompanyIndex].company}
             siteAddress={workExperienceData[activeCompanyIndex].siteAddress}
@@ -34,7 +36,7 @@ const WorkExperienceSection = () => {
         </Box>
         <div className={styles.workExperience__detail__lightEffect}></div>
       </div>
-    </div>
+    </section>
   );
 };
 

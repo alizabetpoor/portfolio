@@ -7,7 +7,7 @@ import styles from "./style.module.scss";
 
 const AboutSection = () => {
   return (
-    <div className={styles.aboutSection}>
+    <section className={styles.aboutSection} aria-labelledby="about-heading">
       <Title id="about" number={1} text="About Me" />
       <div className={styles.aboutSection__describe}>
         <Box className={styles.aboutSection__describe__box}>
@@ -27,15 +27,16 @@ const AboutSection = () => {
         >
           <div className={styles.aboutSection__describe__photo__container}>
             <Image
-              alt="alizabetpour | علی ضابط پور"
+              alt="Portrait of Ali Zabetpour"
               src="/assets/images/personalpic.jpg"
-              layout="fill"
+              fill
+              sizes="(max-width: 1200px) 250px, 522px"
               className={styles.aboutSection__describe__photo__container__image}
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

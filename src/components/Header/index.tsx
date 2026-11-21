@@ -1,17 +1,18 @@
 import Button from "@/core/Button";
+import Link from "next/link";
 import Theme from "@/styles/Theme";
 import MobileMenu from "./MobileMenu";
 import styles from "./style.module.scss";
 
 const Header = () => {
   return (
-    <div className={styles.header}>
-      <div>
+    <header className={styles.header}>
+      <Link href="/" aria-label="Ali Zabetpour home">
         <div className={styles.header__square}></div>
-      </div>
-      <div data-testid="header" className={styles.header__buttons}>
-        <a href="#about">
+      </Link>
+      <nav aria-label="Main navigation" data-testid="header" className={styles.header__buttons}>
           <Button
+            href="#about"
             width="fit-content"
             backgroundColor="transparent"
             color={Theme.lightGray}
@@ -20,9 +21,8 @@ const Header = () => {
           >
             About Me
           </Button>
-        </a>
-        <a href="#experience">
           <Button
+            href="#experience"
             backgroundColor="transparent"
             width="fit-content"
             color={Theme.lightGray}
@@ -31,13 +31,10 @@ const Header = () => {
           >
             Experience
           </Button>
-        </a>
-        <a href="#contact">
-          <Button className="header__buttons__contact">Contact Me</Button>
-        </a>
-      </div>
+          <Button href="#contact" className="header__buttons__contact">Contact Me</Button>
+      </nav>
       <MobileMenu />
-    </div>
+    </header>
   );
 };
 

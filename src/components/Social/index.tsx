@@ -19,8 +19,9 @@ const Social = ({ isHorizontal = false }: SocialProps) => {
         {socialLinksAndSvg.map((social) => (
           <a
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener"
             href={social.link}
+            aria-label={social.name}
             key={social.id}
           >
             <social.svg transform={true} />

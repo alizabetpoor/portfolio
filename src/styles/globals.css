@@ -1,35 +1,8 @@
-@font-face {
-    font-family: 'sfmono-bold';
-    src: url('/public/assets/fonts/SF-Mono-Bold.ttf');
-    font-style: medium;
-    font-weight: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: sfmono;
-    src: url('/public/assets/fonts/SF-Mono-Regular.ttf');
-    font-style: medium;
-    font-weight: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'calibre-bold';
-    src: url('/public/assets/fonts/Calibre-Bold.woff2');
-    font-style: medium;
-    font-weight: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'calibre';
-    src: url('/public/assets/fonts/Calibre-Regular.woff2');
-    font-style: medium;
-    font-weight: normal;
-    font-display: swap;
-}
-
 html,body{
     direction: ltr;
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    overflow-x: clip;
 }
 
 html,*,body{
@@ -39,10 +12,49 @@ html,*,body{
 }
 
 body{
-    background-color: #242424;
+    background-color: #171a1b;
+    color: #e7e8e4;
+    font-family: var(--font-calibre), Arial, sans-serif;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #d4a932; color: #171a1b; }
+
+:focus-visible { outline: 3px solid #e8c45a; outline-offset: 4px; }
+
+a { transition: color 180ms ease, background-color 180ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
 a{
     text-decoration: none;
     color: #b6b5ab;
 }
+
+.skipLink {
+    position: fixed;
+    z-index: 100;
+    top: 12px;
+    left: 12px;
+    padding: 12px 16px;
+    transform: translateY(-150%);
+    color: #171a1b;
+    background: #e8c45a;
+}
+
+.skipLink:focus { transform: translateY(0); }
+
+.notFound {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 18px;
+    padding: 24px;
+    text-align: center;
+}
+
+.notFound p { color: #e8c45a; font-family: monospace; }

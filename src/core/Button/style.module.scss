@@ -1,4 +1,8 @@
+@use "../../styles/_theme.scss" as *;
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-size: 22px;
     background-color: #3A3A39;
@@ -8,6 +12,7 @@
     border: 0;
     padding: 0;
     transition: $transition;
+    text-decoration: none;
 
     &__hover {
         &:hover {
@@ -25,3 +30,6 @@
         }
     }
 }
+
+
+

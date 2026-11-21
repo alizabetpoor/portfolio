@@ -1,5 +1,5 @@
 export const bioSectionData = {
     name:"Ali Zabetpour",
-    position:"front-end dev",
-    degreeOfEducation:"bachelor's degree",
+    position:"Front-end Developer & Software Engineer",
+    degreeOfEducation:"Master’s degree in Computer Engineering (Artificial Intelligence)",
 }

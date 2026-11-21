@@ -1,3 +1,4 @@
+@use "../../../styles/_theme.scss" as *;
 @import '../svg';
 
 .instagramSvg {
@@ -6,3 +7,6 @@
 		@include transformStyle;
 	}
 }
+
+
+

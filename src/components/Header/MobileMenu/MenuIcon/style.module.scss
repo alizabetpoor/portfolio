@@ -1,9 +1,13 @@
+@use "../../../../styles/_theme.scss" as *;
 .menuIcon {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
     direction: rtl;
     cursor: pointer;
+    padding: 8px;
+    border: 0;
+    background: transparent;
 
     span {
         display: inline-block;
@@ -23,3 +27,6 @@
         width: 22.5px;
     }
 }
+
+
+

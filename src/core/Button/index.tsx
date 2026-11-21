@@ -2,7 +2,8 @@ import { ButtonProps } from "@/interface/core/button";
 import styles from "./style.module.scss";
 
 const Button = ({
-  onClick = () => {},
+  onClick,
+  href,
   children,
   width,
   height,
@@ -13,8 +14,26 @@ const Button = ({
   haveHover = false,
   haveBackdrop = true,
 }: ButtonProps) => {
-  return (
+  return href ? (
+    <a
+      href={href}
+      className={`${styles.button}${
+        haveBackdrop ? ` ${styles.button__backdrop}` : ""
+      } ${className}${haveHover ? ` ${styles.button__hover}` : ""}`}
+      style={{
+        width: width,
+        height: height,
+        backgroundColor: backgroundColor,
+        color: color,
+        fontSize: fontSize,
+      }}
+      onClick={onClick}
+    >
+      {children}
+    </a>
+  ) : (
     <button
+      type="button"
       className={`${styles.button}${
         haveBackdrop ? ` ${styles.button__backdrop}` : ""
       } ${className}${haveHover ? ` ${styles.button__hover}` : ""}`}

@@ -1,4 +1,3 @@
-import Label from "@/core/Label";
 import { DetailProps } from "@/interface/components/workExperienceSection/detail";
 import styles from "./style.module.scss";
 
@@ -15,18 +14,33 @@ const Detail = ({
     <div className={styles.detail}>
       <div className={styles.detail__roleAndCompany}>
         <span>{role}</span>
-        <a rel="noreferrer" target="_blank" href={siteAddress}>
-          {company}
-        </a>
+        {siteAddress ? (
+          <a rel="noreferrer noopener" target="_blank" href={siteAddress}>
+            {company}
+          </a>
+        ) : (
+          <span>{company}</span>
+        )}
       </div>
-      <div className={styles.detail__date}>
-        <span>{startDate} </span>
-        <span>- {endDate}</span>
-      </div>
-      <span className={styles.detail__description}>{description}</span>
+      {(startDate || endDate) && (
+        <p className={styles.detail__date}>
+          {startDate && endDate ? `${startDate} – ${endDate}` : startDate || endDate}
+        </p>
+      )}
+      <p className={styles.detail__description}>{description}</p>
       <ul className={styles.detail__items}>
         {items.map((item, index) => (
-          <Label key={index} text={item} />
+          <li key={typeof item === "string" ? item : `${item.href}-${index}`}>
+            {typeof item === "string" ? item : (
+              <>
+                {item.before}
+                <a href={item.href} target="_blank" rel="noreferrer noopener">
+                  {item.label}
+                </a>
+                {item.after}
+              </>
+            )}
+          </li>
         ))}
       </ul>
       <div className={styles.detail__lightEffect}></div>

@@ -6,7 +6,7 @@ describe("aboutSection", () => {
   it("renders aboutSection", () => {
     render(<AboutSection />);
     expect(screen.getByTestId("skills")).toBeInTheDocument();
-    expect(screen.getByTestId("skills").children).toHaveLength(6);
+    expect(screen.getByTestId("skills").children).toHaveLength(7);
     expect(screen.getByTestId("image")).toBeInTheDocument();
   });
 });

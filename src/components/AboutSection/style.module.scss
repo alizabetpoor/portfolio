@@ -1,8 +1,9 @@
+@use "../../styles/_theme.scss" as *;
 @import '@/styles/mediaQueries';
 @import '@/styles/lightEffect';
 
 .aboutSection {
-    padding: 380px 14.6% 0 14.6%;
+    padding: 200px 12% 0;
 
     &__describe {
         display: flex;
@@ -11,8 +12,8 @@
 
         &__box {
             width: 802px;
-            font-size: 28px;
-            line-height: 39px;
+            font-size: 24px;
+            line-height: 1.55;
             color: $gray;
 
             &__skills {
@@ -39,16 +40,14 @@
                 position: relative;
                 overflow: hidden;
                 width: 100%;
+                height: 100%;
 
                 >div {
                     position: unset !important;
                 }
 
                 &__image {
-                    width: 100% !important;
                     object-fit: cover;
-                    position: relative !important;
-                    height: unset;
                 }
 
                 &:after {
@@ -184,7 +183,7 @@
 
 @include sm-media {
     .aboutSection {
-        padding: 200px 0 0 0;
+        padding: 120px 0 0;
 
         &__describe {
             &__box {
@@ -195,3 +194,6 @@
         }
     }
 }
+
+
+

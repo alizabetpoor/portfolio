@@ -1,5 +1,6 @@
 import { EmailProps } from "@/interface/components/email";
 import styles from "./style.module.scss";
+import { contactData } from "@/static/components/contactSection/contactData";
 
 const Email = ({ isHorizontal = false }: EmailProps) => {
   return (
@@ -10,9 +11,9 @@ const Email = ({ isHorizontal = false }: EmailProps) => {
         className={`${
           !isHorizontal ? styles.email__link : styles["emailHorizontal__link"]
         }`}
-        href="mailto:alizabetpoor80@gmail.com"
+        href={`mailto:${contactData.email}`}
       >
-        alizabetpoor80@gmail.com
+        {contactData.email}
       </a>
       <div
         className={`${

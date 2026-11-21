@@ -1,8 +1,14 @@
+@use "../../../styles/_theme.scss" as *;
 @import '@/styles/mediaQueries';
 
 
 .mobileMenu {
   display: none;
+
+  &__icon {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   &__body {
     position: fixed;
@@ -17,6 +23,8 @@
 
 
     &__cross {
+      border: 0;
+      background: transparent;
       position: relative;
       align-self: flex-end;
       margin-top: 56px;
@@ -118,3 +126,6 @@
     transform: translateX(100%);
   }
 }
+
+
+

@@ -1,3 +1,4 @@
+@use "../../styles/_theme.scss" as *;
 @import '@/styles/mediaQueries';
 @import '@/styles/lightEffect';
 
@@ -6,6 +7,8 @@
     cursor: pointer;
     right: -76.5px;
     top: 40%;
+    border: 0;
+    background: transparent;
 
     &--animate {
         animation: rotate 1s linear infinite;
@@ -52,3 +55,6 @@
         display: none;
     }
 }
+
+
+

@@ -4,18 +4,18 @@ import styles from "./style.module.scss";
 
 const ContactBox = () => {
   return (
-    <Box className={styles.contactBox}>
+    <Box as="dl" className={styles.contactBox}>
       <div className={styles.contactBox__item}>
-        <span>Number</span>
-        <span>{contactData.phoneNumber}</span>
+        <dt>Phone</dt>
+        <dd><a href={`tel:${contactData.phoneNumber.replace(/[^+\d]/g, "")}`}>{contactData.phoneNumber}</a></dd>
       </div>
       <div className={styles.contactBox__item}>
-        <span>E-mail</span>
-        <span>{contactData.email}</span>
+        <dt>Email</dt>
+        <dd><a href={`mailto:${contactData.email}`}>{contactData.email}</a></dd>
       </div>
       <div className={styles.contactBox__item}>
-        <span>Location</span>
-        <span>{contactData.location}</span>
+        <dt>Location</dt>
+        <dd>{contactData.location}</dd>
       </div>
     </Box>
   );

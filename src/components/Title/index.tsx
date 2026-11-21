@@ -17,7 +17,7 @@ const Title = ({
       >
         0{number}.
       </span>
-      <h3 className={styles.title__text}>{text}</h3>
+      <h2 id={`${id}-heading`} className={styles.title__text}>{text}</h2>
     </div>
   );
 };
